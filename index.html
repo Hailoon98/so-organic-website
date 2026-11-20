@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SO Organic Biotech Enterprise Limited | 有機生物科技有限公司</title>
+<meta name="description" content="SO Organic Biotech Enterprise Limited (SOBE) — Hong Kong developer of microbial formulations and organic preparations for agriculture, animal care, resource recovery, water systems and household care.">
+<link rel="icon" href="favicon.png">
+<style>
+:root{--navy:#0e1a2e;--navy2:#16263f;--cream:#f4f0e8;--paper:#fbf9f4;--gold:#b08d2e;--gold2:#d3b25a;--green:#2f5d3a;--ink:#1c2430;--mute:#5d6673;--line:#ddd6c6;--serif:Georgia,"Times New Roman","Songti SC","Noto Serif CJK TC",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","PingFang TC","Microsoft JhengHei",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.15}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.dark .eyebrow{color:var(--gold2)}
+section{padding:88px 0}
+.lede{font-size:18px;color:var(--mute);max-width:640px;margin-top:14px}
+.dark{background:var(--navy);color:#e9edf3}
+.dark .lede{color:#a9b4c4}
+h2{font-size:clamp(30px,4vw,44px)}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(14,26,46,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand img{height:38px;width:auto}
+.brand b{font-family:var(--serif);font-weight:400;font-size:18px;letter-spacing:.14em}
+.brand small{display:block;font-size:10px;letter-spacing:.12em;color:#a9b4c4;text-transform:uppercase;margin-top:1px}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{color:#cdd5e1;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--gold2)}
+.cta{background:var(--gold);color:#fff!important;padding:9px 18px;border-radius:3px;font-weight:600}
+.cta:hover{background:var(--gold2)}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 12px;border-radius:3px;font-size:14px;cursor:pointer}
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 64px);max-height:820px;display:flex;align-items:center;color:#fff;overflow:hidden;padding:80px 0}
+.hero .bg{position:absolute;inset:0;background:url(a-hero-microscope.webp) center/cover;opacity:.55}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 8%,rgba(14,26,46,.55) 60%,rgba(14,26,46,.15));z-index:1}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(40px,6vw,72px);max-width:760px}
+.hero .zh{font-family:var(--serif);font-size:22px;color:var(--gold2);margin:18px 0 22px;letter-spacing:.06em}
+.hero p.lede{color:#c6cfdc}
+.btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:3px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--gold);cursor:pointer;font-family:inherit}
+.btn.fill{background:var(--gold);color:#fff}.btn.fill:hover{background:var(--gold2)}
+.btn.line{color:#fff;border-color:rgba(255,255,255,.45);background:transparent}.btn.line:hover{border-color:#fff}
+.facts{position:relative;z-index:2;margin-top:-1px;background:var(--navy2);border-top:1px solid rgba(255,255,255,.08)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:26px 24px;border-left:1px solid rgba(255,255,255,.08)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;color:var(--gold2)}
+.fact span{font-size:13px;color:#a9b4c4;letter-spacing:.04em}
+/* about */
+.two{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.two img{border-radius:4px;width:100%;box-shadow:0 20px 50px rgba(14,26,46,.18)}
+.about p{margin-top:16px;color:var(--mute);font-size:17px}
+.about p:first-of-type{margin-top:22px}
+.ticks{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.tick{border-top:2px solid var(--gold);padding-top:12px}
+.tick b{font-family:var(--serif);font-weight:400;font-size:19px;display:block}
+.tick span{font-size:14px;color:var(--mute)}
+/* science */
+.science .two{gap:56px}
+.science p{color:#a9b4c4;margin-top:16px;font-size:17px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+.cols div{border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
+.cols h4{font-size:20px;margin-bottom:6px}
+.cols p{font-size:15px;margin:0}
+/* applications */
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.app{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;color:#fff;text-decoration:none;display:block;background:var(--navy)}
+.app img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.app:hover img{transform:scale(1.06)}
+.app:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,26,46,0) 30%,rgba(14,26,46,.92))}
+.app div{position:absolute;left:0;right:0;bottom:0;padding:20px;z-index:2}
+.app h3{font-size:24px}
+.app p{font-size:14px;color:#d4dbe6;margin-top:6px}
+/* catalogue */
+.catalogue{background:var(--cream)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 30px}
+.chip{border:1px solid var(--line);background:#fff;padding:8px 16px;border-radius:99px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--ink)}
+.chip.on,.chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.pic{display:grid;grid-template-columns:1fr 1.25fr;grid-template-rows:190px;height:190px;overflow:hidden;background:#efeadd}
+.pic .pk{background:#f3efe4;display:flex;align-items:center;justify-content:center;padding:10px}
+.pic .pk img{max-height:170px;width:auto;object-fit:contain;mix-blend-mode:multiply}
+.pic .ph{position:relative;overflow:hidden}.pic .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .tag{font-size:11px;letter-spacing:.12em;color:var(--gold);font-weight:700;text-transform:uppercase}
+.card h3{font-size:21px}
+.card p{font-size:14px;color:var(--mute);flex:1}
+.card .size{font-size:12px;color:var(--ink);background:var(--cream);padding:3px 9px;border-radius:99px;align-self:flex-start}
+.card button{margin-top:10px;background:none;border:1px solid var(--navy);color:var(--navy);padding:9px;border-radius:3px;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit}
+.card button:hover,.card button.added{background:var(--navy);color:#fff}
+.note{margin-top:28px;font-size:14px;color:var(--mute)}
+/* quality */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:46px;border-top:1px solid rgba(255,255,255,.18)}
+.step{padding:26px 24px 0 0;position:relative}
+.step i{font-style:normal;font-family:var(--serif);color:var(--gold2);font-size:34px;display:block;margin-bottom:8px}
+.step h4{font-size:21px;margin-bottom:8px}
+.step p{font-size:14.5px;color:#a9b4c4}
+/* production */
+.prod{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.prod figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.prod h4{font-size:22px;margin:16px 0 6px}
+.prod p{font-size:15px;color:var(--mute)}
+/* food waste */
+.fw{background:var(--cream)}
+.fw .three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.fw .three div{background:#fff;border:1px solid var(--line);padding:22px;border-radius:4px}
+.fw .three b{font-family:var(--serif);font-weight:400;font-size:22px;display:block;margin-bottom:6px;color:var(--green)}
+.fw .three span{font-size:14.5px;color:var(--mute)}
+/* partners / contact */
+.partners .two img{aspect-ratio:3/2;object-fit:cover}
+.plist{margin-top:26px;display:grid;gap:18px}
+.plist div{border-left:3px solid var(--gold);padding-left:16px}
+.plist b{font-family:var(--serif);font-weight:400;font-size:20px;display:block}
+.plist span{font-size:15px;color:var(--mute)}
+.contact{position:relative;color:#fff;background:var(--navy)}
+.contact .bgimg{position:absolute;inset:0;background:url(a-skyline.webp) center/cover;opacity:.28}
+.contact .wrap{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
+.cinfo p{margin-top:22px;color:#c6cfdc}
+.cinfo dl{margin-top:28px;display:grid;gap:18px}
+.cinfo dt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
+.cinfo dd{font-size:17px}
+.cinfo a{text-decoration:none;border-bottom:1px solid var(--gold)}
+form{background:rgba(255,255,255,.96);color:var(--ink);padding:30px;border-radius:4px;display:grid;gap:14px}
+form h3{font-size:24px}
+label{font-size:13px;font-weight:600;display:grid;gap:5px}
+input,textarea{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--ink);width:100%}
+input:focus,textarea:focus{outline:2px solid var(--gold2);outline-offset:0;border-color:var(--gold)}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fmsg{font-size:13px;color:var(--mute)}
+#count{display:inline-block;background:var(--gold);color:#fff;border-radius:99px;padding:0 8px;font-size:12px;margin-left:4px}
+footer{background:#09111f;color:#8b97a9;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){
+ section{padding:64px 0}
+ nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);flex-direction:column;padding:16px 24px 24px;gap:16px;border-bottom:1px solid rgba(255,255,255,.1)}
+ nav ul.open{display:flex}
+ .burger{display:block}
+ .two,.contact .wrap{grid-template-columns:1fr;gap:34px}
+ .apps,.grid,.prod,.fw .three{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .facts .wrap{grid-template-columns:1fr 1fr}.fact:nth-child(3){border-left:0;padding-left:0}
+}
+@media(max-width:600px){
+ .apps,.grid,.prod,.fw .three,.steps,.row,.cols,.ticks{grid-template-columns:1fr}
+ .brand small{display:none}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="brand" href="#top"><img src="a-logo.png" alt="SOBE logo"><span><b>SOBE</b><small>So Organic Biotech</small></span></a>
+ <button class="burger" id="burger" aria-label="Menu">Menu</button>
+ <nav><ul id="menu">
+  <li><a href="#about">Company</a></li><li><a href="#applications">Applications</a></li><li><a href="#catalogue">Catalogue</a></li><li><a href="#quality">Quality</a></li><li><a href="#production">Production</a></li><li><a href="#partners">Partners</a></li><li><a class="cta" href="#contact">Enquire</a></li>
+ </ul></nav>
+</div></header>
+
+<main id="top">
+<div class="hero dark">
+ <div class="bg"></div>
+ <div class="wrap">
+  <div class="eyebrow">Hong Kong · Corporate profile</div>
+  <h1>SO Organic Biotech Enterprise Limited</h1>
+  <div class="zh">有機生物科技有限公司</div>
+  <p class="lede">A Hong Kong biotech company developing microbial formulations and organic preparations for agriculture, animal care and organic resource recovery.</p>
+  <div class="btns"><a class="btn fill" href="#catalogue">View product catalogue</a><a class="btn line" href="#contact">Distribution enquiries</a></div>
+ </div>
+</div>
+<div class="facts dark"><div class="wrap">
+ <div class="fact"><b>2014</b><span>Incorporated 2 September</span></div>
+ <div class="fact"><b>26</b><span>Products and variants</span></div>
+ <div class="fact"><b>6</b><span>Application areas</span></div>
+ <div class="fact"><b>2139890</b><span>Hong Kong company number</span></div>
+</div></div>
+
+<section id="about" class="about"><div class="wrap two">
+ <div>
+  <div class="eyebrow">01 / Company</div>
+  <h2>A Hong Kong biotech company</h2>
+  <p>SO Organic Biotech Enterprise Limited (“SOBE”) was incorporated in Hong Kong on 2 September 2014. The Company develops microbial formulations and organic preparations for agriculture, animal care and organic resource recovery.</p>
+  <p>SOBE’s focus is on matching microbial and organic preparations to defined applications and suitable product formats. The original range uses liquid, powder and granular formats: powdered nutritional supplements for dogs and cats, bamboo-grade granular fertiliser, liquid fertilisers, and a powder for composting food waste.</p>
+  <div class="ticks">
+   <div class="tick"><b>Product development</b><span>Select a formulation and physical format around the intended user, setting and handling requirements.</span></div>
+   <div class="tick"><b>Partner support</b><span>Define the information distributors need for product selection, label review, storage and local market checks.</span></div>
+  </div>
+  <p>In 2018, SOBE presented its microbial waste-treatment solutions at Eco Expo Asia alongside its plant and pet product lines.</p>
+ </div>
+ <img src="a-lab-team.webp" alt="Researchers working in a laboratory">
+</div></section>
+
+<section class="science dark" id="science"><div class="wrap two">
+ <img src="a-lab-glass.webp" alt="Laboratory glassware" style="box-shadow:none">
+ <div>
+  <div class="eyebrow">02 / Science</div>
+  <h2>Microbial formulations</h2>
+  <p>A formulation brings microbial inputs and other ingredients together in a format suited to its intended use.</p>
+  <div class="cols">
+   <div><h4>Culture and matrix</h4><p>The microbial input is one part of the preparation. Other ingredients help define how the product is supplied and handled.</p></div>
+   <div><h4>Use conditions</h4><p>Suitability depends on the formulation, the application setting and the evidence available for the specific product.</p></div>
+  </div>
+ </div>
+</div></section>
+
+<section id="applications"><div class="wrap">
+ <div class="eyebrow">03 / Applications</div>
+ <h2>Where the portfolio is used</h2>
+ <p class="lede">Six application areas, from crop nutrition to the management of organic waste and water systems.</p>
+ <div class="apps">
+  <a class="app" href="#catalogue" data-go="Agriculture"><img src="a-agri.webp" alt="Crop seedlings in soil" loading="lazy"><div><h3>Agriculture</h3><p>Crop nutrition, cultivated soils, and root, leaf and seed applications.</p></div></a>
+  <a class="app" href="#catalogue" data-go="Pet care"><img src="a-pets.webp" alt="Cat and dog" loading="lazy"><div><h3>Pet care</h3><p>Pet nutrition, grooming and care for animal spaces.</p></div></a>
+  <a class="app" href="#catalogue" data-go="Livestock"><img src="a-livestock.webp" alt="Cattle in a barn" loading="lazy"><div><h3>Livestock</h3><p>Feed preparations by animal group and livestock housing care.</p></div></a>
+  <a class="app" href="#catalogue" data-go="Resource recovery"><img src="a-compost-bin.webp" alt="Food scraps going into a compost bin" loading="lazy"><div><h3>Resource recovery</h3><p>Managed composting, bokashi and handling of segregated organic waste.</p></div></a>
+  <a class="app" href="#catalogue" data-go="Water systems"><img src="a-pond.webp" alt="Aerated aquaculture pond" loading="lazy"><div><h3>Water systems</h3><p>Septic maintenance, managed wastewater and aquaculture pond applications.</p></div></a>
+  <a class="app" href="#catalogue" data-go="Household care"><img src="a-cleaning.webp" alt="Wiping a kitchen surface" loading="lazy"><div><h3>Household care</h3><p>Microbial cleaning for compatible household surfaces.</p></div></a>
+ </div>
+</div></section>
+
+<section class="catalogue" id="catalogue"><div class="wrap">
+ <div class="eyebrow">04 / Product catalogue</div>
+ <h2>The collection</h2>
+ <p class="lede">Twenty-six products and variants, including original catalogue items and the expanded portfolio supplied by SOBE. Check the current product label for pack size, intended application and directions before ordering or using a product.</p>
+ <div class="chips" id="chips"></div>
+ <div class="grid" id="grid"></div>
+ <p class="note">For products without a listed size, confirm the available pack with SOBE before ordering. Distributors: request the current specification, net contents, case pack, shelf life and storage conditions for the exact product and market.</p>
+</div></section>
+
+<section class="dark" id="quality"><div class="wrap">
+ <div class="eyebrow">05 / Quality</div>
+ <h2>Quality and traceability</h2>
+ <p class="lede">Batch records connect the product supplied with the materials, checks and packaging used for that lot.</p>
+ <div class="steps">
+  <div class="step"><i>01</i><h4>Incoming materials</h4><p>Record identity, supplier reference and lot information for each relevant material.</p></div>
+  <div class="step"><i>02</i><h4>Production record</h4><p>Retain the batch reference and link it to inputs and in-process observations.</p></div>
+  <div class="step"><i>03</i><h4>Finished product</h4><p>Compare the results of applicable product checks with the agreed release specification.</p></div>
+  <div class="step"><i>04</i><h4>Packaging and dispatch</h4><p>Connect pack checks, lot coding, storage conditions and shipment records to the released batch.</p></div>
+ </div>
+</div></section>
+
+<section id="production"><div class="wrap">
+ <div class="eyebrow">06 / Production</div>
+ <h2>From materials to finished product</h2>
+ <p class="lede">Cultivation, fermentation and downstream handling vary by product. Each step is documented against the applicable specification.</p>
+ <div class="prod">
+  <figure><img src="a-workers.webp" alt="Weighing ingredients" loading="lazy"><h4>Materials and culture inputs</h4><p>Raw materials and microbial inputs are selected against the intended product specification. Ingredient records establish the material name and lot for each input, and culture identity and batch references connect preparation with the production record.</p></figure>
+  <figure><img src="a-tanks.webp" alt="Fermentation vessels" loading="lazy"><h4>Fermentation and manufacturing</h4><p>Production records capture the sequence of work and link observations and samples to the batch. The formulation determines whether material proceeds to liquid filling or to solid-product blending and finishing.</p></figure>
+  <figure><img src="a-filling.webp" alt="Bottle filling line" loading="lazy"><h4>Formulation and packing</h4><p>Bottle or jug formats for liquids; pouches, jars and sacks for powders and granules. Lot codes, pack integrity and handling information link finished goods to the supply record.</p></figure>
+ </div>
+</div></section>
+
+<section class="fw"><div class="wrap two">
+ <img src="a-compost-hands.webp" alt="Sorting food waste for composting" loading="lazy">
+ <div>
+  <div class="eyebrow">07 / Resource recovery</div>
+  <h2>Food waste as a resource</h2>
+  <p style="margin-top:16px;color:var(--mute);font-size:17px">A food-waste preparation is one input in a managed process. Sorting, monitoring and assessment guide the resulting material’s use.</p>
+  <div class="three" style="grid-template-columns:1fr;gap:14px">
+   <div><b>Separate</b><span>Identify the organic waste stream and remove incompatible material.</span></div>
+   <div><b>Manage</b><span>Choose the treatment approach for the waste stream and follow the relevant product and site instructions.</span></div>
+   <div><b>Assess</b><span>Review the resulting material for suitability before any intended reuse.</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="partners" id="partners"><div class="wrap two">
+ <div>
+  <div class="eyebrow">08 / Partnerships</div>
+  <h2>International partnerships</h2>
+  <p style="margin-top:16px;color:var(--mute);font-size:17px">SOBE works with business partners to define the assortment, product documentation and supply arrangements for the destination market.</p>
+  <div class="plist">
+   <div><b>Market and assortment</b><span>Identify customer segments, sales channels and intended applications. Select the product families and pack formats that fit.</span></div>
+   <div><b>Product documentation</b><span>Review specifications, labels and use directions. Confirm permitted claims and supporting records for the destination market.</span></div>
+   <div><b>Commercial supply</b><span>Confirm order quantities, lead times, shipment terms and any product-specific storage requirements before order placement.</span></div>
+  </div>
+ </div>
+ <img src="a-meeting.webp" alt="Business partners reviewing product samples" loading="lazy">
+</div></section>
+
+<section class="contact" id="contact"><div class="bgimg"></div><div class="wrap">
+ <div class="cinfo">
+  <div class="eyebrow">09 / Partner enquiries</div>
+  <h2>Distribution enquiries</h2>
+  <p>Tell us your market, the product families you are interested in and your intended sales channel. We will reply with the current specification and supply information.</p>
+  <dl>
+   <div><dt>Company</dt><dd>SO Organic Biotech Enterprise Limited<br>有機生物科技有限公司</dd></div>
+   <div><dt>Address</dt><dd id="addr"></dd></div>
+   <div><dt>Email</dt><dd><a id="mail" href="#"></a></dd></div>
+   <div><dt>Telephone</dt><dd><a id="tel" href="#"></a></dd></div>
+  </dl>
+ </div>
+ <form id="enq">
+  <h3>Send an enquiry <span id="count" hidden></span></h3>
+  <div class="row"><label>Name<input name="name" required></label><label>Company<input name="company"></label></div>
+  <div class="row"><label>Email<input type="email" name="email" required></label><label>Country / market<input name="market"></label></div>
+  <label>Products of interest<textarea name="products" id="products" placeholder="Use “Add to enquiry” in the catalogue, or type here."></textarea></label>
+  <label>Message<textarea name="msg" style="min-height:90px"></textarea></label>
+  <button class="btn fill" type="submit">Send enquiry</button>
+  <div class="fmsg">Opens your email app with the enquiry addressed to SOBE.</div>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> SO Organic Biotech Enterprise Limited · 有機生物科技有限公司</span><span>Hong Kong company no. 2139890</span></div></footer>
+
+<script>
+var CONTACT={email:"info@so-organic.com",phone:"+852 3896 5038",address:"Level 25, Ginza Plaza, 2A-2H Sai Yeung Choi Street South, Mongkok, Hong Kong"};
+var CATS=["Agriculture","Pet care","Livestock","Resource recovery","Water systems","Household care"];
+// [name, category, tag, description, size]
+var P=[
+["Bamboo Grade Granular Fertiliser","Agriculture","Granules","For horticultural soil preparation. Apply to soil as directed on the pack.","20 kg"],
+["Bio-Liquid Fertiliser — Growth","Agriculture","Liquid fertiliser","For the active growing stage. Follow the label for dilution and application method.",""],
+["Bio-Liquid Fertiliser — Flowering & Fruiting","Agriculture","SOBE-LFR_S","For crops in flower or fruit. Follow the label for dilution and timing.","250 mL"],
+["Microbial Soil Activator","Agriculture","Soil amendment","For cultivated soils and growing media. Check which media and application methods the label covers.",""],
+["Root Growth Enhancer","Agriculture","Root-zone preparation","For established crops and transplants. Check whether the label specifies a drench or another application route.",""],
+["Foliar Nutrition Concentrate","Agriculture","Foliar concentrate","For application to foliage. Follow the label for crop suitability, dilution and spray timing.",""],
+["Seed Treatment Microbial Solution","Agriculture","Seed treatment","For treating compatible seed before sowing. Check the label for the approved treatment method and handling directions.",""],
+["Dogs Bio-Nutrients","Pet care","SOBE-PD_2","Powder for canine feeding. Use the current dog-specific feeding directions.","200 g"],
+["Cat Bio-Nutrients","Pet care","Powder","Powder for feline feeding. Use the current cat-specific feeding directions.","200 g"],
+["Cats & Dogs Bio-Nutrients","Pet care","Jar and carton","For cats and dogs. Use the directions for the relevant species.",""],
+["Pet Digestive Microbial Supplement","Pet care","Companion-animal supplement","For pet feeding programmes. Confirm the intended species and serving instructions.",""],
+["Poultry Direct-Fed Microbial","Livestock","Poultry feed preparation","For poultry rations. Follow feed-label incorporation directions for the intended bird class.",""],
+["Cattle Microbial Feed Supplement","Livestock","Cattle feed supplement","For cattle rations. Confirm the animal class and feed inclusion directions.",""],
+["Equine Digestive Support","Livestock","Equine feeding preparation","For horses. Check the label for serving and feeding directions.",""],
+["Swine Microbial Supplement","Livestock","Swine feed supplement","For pig rations. Confirm the production stage and feed inclusion directions.",""],
+["Food Waste Composting EM Powder","Resource recovery","SOBE-FW_2","For sorted food scraps in a managed composting process. Follow the pack directions.","200 g"],
+["Compost Accelerator Concentrate","Resource recovery","Compost concentrate","For managed compost systems. Confirm the intended feedstock and application method.",""],
+["Organic Waste Treatment Solution","Resource recovery","Organic waste treatment","For segregated organic waste. Check the approved waste types and site instructions.",""],
+["Bokashi Composting Starter","Resource recovery","Bokashi starter","For closed-container bokashi systems. Follow the starter and bin instructions.",""],
+["Septic Treatment Concentrate","Water systems","Septic system concentrate","For compatible septic systems. Confirm the application point and follow system and product instructions.",""],
+["Wastewater Microbial Treatment","Water systems","Wastewater preparation","For managed wastewater systems. Match the product to the treatment stage using the operator’s instructions.",""],
+["Aquaculture Pond Bio-Treatment","Water systems","Pond treatment","For managed aquaculture ponds. Confirm compatibility with the pond and cultured species before use.",""],
+["Pet Environment Deodoriser","Household care","Pet-area deodoriser","For compatible pet-area surfaces. Follow the label for surface preparation and use.",""],
+["Pet Microbial Grooming Solution","Household care","Pet grooming preparation","For grooming. Check species suitability and follow the instructions for application and rinsing.",""],
+["Livestock Housing Deodoriser","Household care","Housing deodoriser","For livestock housing. Check which surfaces and occupied areas the label covers.",""],
+["Multi-Purpose Microbial Cleaner","Household care","Household surface cleaner","For compatible household surfaces. Follow the label for application and wiping.",""]
+];
+var chips=document.getElementById("chips"),grid=document.getElementById("grid"),sel=[],cur="All";
+function pad(n){return n<10?"0"+n:""+n}
+function render(){
+ grid.innerHTML="";
+ P.forEach(function(p,i){
+  if(cur!=="All"&&p[1]!==cur)return;
+  var n=pad(i+1),on=sel.indexOf(p[0])>-1,c=document.createElement("div");
+  c.className="card";
+  c.innerHTML='<div class="pic"><div class="pk"><img src="a-p'+n+'.webp" alt="'+p[0]+' pack" loading="lazy"></div><div class="ph"><img src="a-p'+n+'b.webp" alt="" loading="lazy"></div></div><div class="body"><span class="tag">'+p[2]+'</span><h3>'+p[0]+'</h3>'+(p[4]?'<span class="size">'+p[4]+'</span>':'')+'<p>'+p[3]+'</p><button type="button" data-i="'+i+'" class="'+(on?"added":"")+'">'+(on?"Added ✓":"Add to enquiry")+'</button></div>';
+  grid.appendChild(c);
+ });
+}
+function chip(name){var b=document.createElement("button");b.type="button";b.className="chip"+(name===cur?" on":"");b.textContent=name;b.onclick=function(){cur=name;drawChips();render()};chips.appendChild(b)}
+function drawChips(){chips.innerHTML="";chip("All");CATS.forEach(chip)}
+function sync(){
+ var t=document.getElementById("products");t.value=sel.join("\n");
+ var c=document.getElementById("count");c.hidden=!sel.length;c.textContent=sel.length;
+}
+grid.addEventListener("click",function(e){
+ var b=e.target.closest("button[data-i]");if(!b)return;
+ var name=P[+b.dataset.i][0],k=sel.indexOf(name);
+ if(k>-1)sel.splice(k,1);else sel.push(name);
+ sync();render();
+});
+document.querySelectorAll("[data-go]").forEach(function(a){a.addEventListener("click",function(){cur=a.dataset.go;drawChips();render()})});
+document.getElementById("enq").addEventListener("submit",function(e){
+ e.preventDefault();var f=e.target;
+ var body="Name: "+f.name.value+"\nCompany: "+f.company.value+"\nEmail: "+f.email.value+"\nMarket: "+f.market.value+"\n\nProducts of interest:\n"+f.products.value+"\n\nMessage:\n"+f.msg.value;
+ location.href="mailto:"+CONTACT.email+"?subject="+encodeURIComponent("Distribution enquiry — "+(f.company.value||f.name.value))+"&body="+encodeURIComponent(body);
+});
+document.getElementById("addr").textContent=CONTACT.address;
+var m=document.getElementById("mail");m.textContent=CONTACT.email;m.href="mailto:"+CONTACT.email;
+var t=document.getElementById("tel");t.textContent=CONTACT.phone;t.href="tel:"+CONTACT.phone.replace(/\s/g,"");
+document.getElementById("yr").textContent=new Date().getFullYear();
+document.getElementById("burger").onclick=function(){document.getElementById("menu").classList.toggle("open")};
+document.querySelectorAll("#menu a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("menu").classList.remove("open")})});
+drawChips();render();
+</script>
+</body>
+</html>
